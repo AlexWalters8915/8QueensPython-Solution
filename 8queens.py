@@ -1,6 +1,6 @@
 import random
 import numpy as np
-#intialize the array fir tge first time
+#intialize the array for the first time
 board = np.zeros((8, 8), dtype=int)
 count = 1
 for columns in range(8):
@@ -23,7 +23,7 @@ def show_board(board):
 
 #Todo
 #check rows
-#check diagonols
+#check diagonals
 #look into numpy for this
 #https://numpy.org/doc/stable/reference/generated/numpy.diagonal.html
 #https://sparkbyexamples.com/numpy/how-to-get-numpy-diagonal/
@@ -53,8 +53,8 @@ def heuristicScore(board):
 #Todo
 #check compare scores
 #check restart if board is worse then current
-#continue looping until 0 or max atteampt
-#print relavent info
+#continue looping until 0 or max attempt
+#print relevant info
 #https://www.geeksforgeeks.org/introduction-hill-climbing-artificial-intelligence/#
 def restart(board):
     restartAttempts = 0
@@ -108,7 +108,7 @@ def possibilitiesGenerator(board):
     for col in range(8):
         for row in range(8):
             if board[row, col] == 1:
-        #loop over all the rows to generate every possible postion
+        #loop over all the rows to generate every possible position
                 for i in range(8):
                     if i != row:
                         trial = np.copy(board)
